@@ -1,0 +1,67 @@
+Index: lesson 1/lesson1task3.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lesson 1/lesson1task3.php b/lesson 1/lesson1task3.php
+new file mode 100644
+--- /dev/null	(date 1701768994607)
++++ b/lesson 1/lesson1task3.php	(date 1701768994607)
+@@ -0,0 +1,13 @@
++// Объяснить, как работает данный код
++
++<?php
++    $a = 5;
++    $b = '05';
++    var_dump($a == $b);         // Почему true? - потому что сравнение == только значения, без типов
++
++    var_dump((int)'012345');     // Почему 12345? - приведение к числу, 0 в начале отпадет
++
++    var_dump((float)123.0 === (int)123.0); // Почему false? - Сравнение строгое, не только значения, но и типы
++
++    var_dump((int)0 === (int)'hello, world'); // Почему true? - текст в число не перевести, будет как int(0)
++?>
+\ No newline at end of file
+Index: lesson 1/lesson1task5.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lesson 1/lesson1task5.php b/lesson 1/lesson1task5.php
+new file mode 100644
+--- /dev/null	(date 1701769099640)
++++ b/lesson 1/lesson1task5.php	(date 1701769099640)
+@@ -0,0 +1,9 @@
++/*Используя только две переменные, поменяйте их значение местами. Например, если a = 1, b = 2, надо, чтобы получилось: b = 1, a = 2. Дополнительные переменные использовать нельзя.*/
++
++<?php
++    $a = "1";
++    $b = "2";
++  $a++;
++  $b--;
++  echo 'a = ' . $a . '<br>' . 'b = ' . $b;
++ ?>
+Index: lesson 1/lesson1task4.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lesson 1/lesson1task4.php b/lesson 1/lesson1task4.php
+new file mode 100644
+--- /dev/null	(date 1701769041798)
++++ b/lesson 1/lesson1task4.php	(date 1701769041798)
+@@ -0,0 +1,13 @@
++/*Используя имеющийся HTML-шаблон, сделать так,
++чтобы главная страница генерировалась через PHP. Создать блок переменных в начале страницы.
++Сделать так, чтобы h1, title и текущий год генерировались в блоке контента
++ из созданных переменных.*/
++<?php
++    $title = 'Вася';
++    $content = 'Пупкин';
++    $_date = date('d.m.Y H:i:s');
++ ?>
++
++ <h1><?php echo $title?></h1>
++ <p><?php echo $content?></p>
++ <p><?php echo $_date?></p>
+\ No newline at end of file
